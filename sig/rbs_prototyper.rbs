@@ -1,4 +1,17 @@
 module RbsPrototyper
   VERSION: String
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+
+  class Error < StandardError
+  end
+
+  def self.generate: (target_path: ::String, ?output_dir: ::String, ?command: ::String) -> void
+
+  private
+
+  PROTOTYPE_COMMANDS: ::Hash[::String, "rbs prototype rb" | "typeprof"]
+
+  def self.generate_rbs_recursively: (::String target_path, ::String output_dir, ::String command) -> void
+
+  def self.generate_rbs: (::String target_path, ::String output_dir, ::String command) -> void
 end
