@@ -1,8 +1,7 @@
 # RbsPrototyper
+Generate rbs prototypes.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rbs_prototyper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+For example, this gem is used to generate a batch of gem rbs files at one time.
 
 ## Installation
 
@@ -16,7 +15,18 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# output rbs files from ruby files under the target_path to output_dir
+RbsPrototyper.generate(target_path: '/path/to/nice_gem/lib', output_dir: "sig/nice_gem")
+```
+
+This gem uses `rbs prototype rb` by default. You can use `typeprof`.
+
+
+```ruby
+# with typeprof
+RbsPrototyper.generate(target_path: '/path/to/nice_gem/lib', output_dir: "sig/nice_gem", command: 'typeprof')
+```
 
 ## Development
 
