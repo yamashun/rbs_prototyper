@@ -8,9 +8,9 @@ module RbsPrototyper
   # Your code goes here...
 
   def self.generate(target_path:, output_dir: 'sig', command: 'rbs')
-    raise Error, '指定したファイルまたはディレクトリが存在しません' if !File.file?(target_path) && !File::directory?(target_path)
-    raise Error, '.rb ファイルを指定してください' if File.file?(target_path) && !target_path.end_with?('.rb')
-    raise Error, '不正なコマンドです' unless PROTOTYPE_COMMANDS.include?(command)
+    raise Error, 'The specified file or directory does not exist.' if !File.file?(target_path) && !File::directory?(target_path)
+    raise Error, 'Specify the .rb file' if File.file?(target_path) && !target_path.end_with?('.rb')
+    raise Error, 'Invalid command.' unless PROTOTYPE_COMMANDS.include?(command)
 
     if File::directory?(target_path)
       generate_rbs_recursively(target_path, output_dir, command)
