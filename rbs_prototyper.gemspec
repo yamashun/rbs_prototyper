@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["yamashun"]
   spec.email = ["yshunske@gmail.com"]
 
-  spec.summary = "%q{Generate rbs prototypes.}"
-  spec.description = "%q{For example, this gem is used to generate a batch of gem rbs files at one time.}"
+  spec.summary = "Generate rbs prototypes."
+  spec.description = "For example, this gem is used to generate a batch of gem rbs files at one time."
   spec.homepage = "https://github.com/yamashun/rbs_prototyper"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
